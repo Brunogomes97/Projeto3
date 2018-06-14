@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1528984451 source:/home/aluno/Desktop/Projeto3/main.cpp
+	"opencv2/objdetect.hpp"
+	"opencv2/highgui.hpp"
+	"opencv2/imgproc.hpp"
+	<iostream>
+	<exception>
+	<unistd.h>
+	"Face.h"
+
+1528984713 source:/home/aluno/Desktop/Projeto3/src/Face.cpp
+	"Face.h"
+
+1528984713 /home/aluno/Desktop/Projeto3/include/Face.h
+	"opencv2/objdetect.hpp"
+	"opencv2/highgui.hpp"
+	"opencv2/imgproc.hpp"
+	<iostream>
+	<exception>
+	<unistd.h>
+
+1528998508 source:/home/aluno/Documentos/Projeto3/main.cpp
+	"opencv2/objdetect.hpp"
+	"opencv2/highgui.hpp"
+	"opencv2/imgproc.hpp"
+	<iostream>
+	<exception>
+	<unistd.h>
+	"Face.h"
+
+1528986482 /home/aluno/Documentos/Projeto3/include/Face.h
+	"opencv2/objdetect.hpp"
+	"opencv2/highgui.hpp"
+	"opencv2/imgproc.hpp"
+	<iostream>
+	<exception>
+	<unistd.h>
+
+1529003558 source:/home/aluno/Documentos/Projeto3/src/Face.cpp
+	"Face.h"
+
