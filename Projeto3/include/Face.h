@@ -6,18 +6,22 @@
 #include <iostream>
 #include <exception>
 #include <unistd.h>
-using namespace cv;
+#include "ExibirTxt.h"
+
 class Face
 {
     public:
         Face();
-        void detectarFace(Mat img, CascadeClassifier cascade, double scale);
+        void detectarFace(cv::Mat img, cv::CascadeClassifier cascade, double scale);
         virtual ~Face();
         int getCont();
-        int cont;
+        void algoritimo(int);
+        ExibirTxt txt;
 
     private:
+        int cont;
         int quantFaces;
+
 
 };
 
