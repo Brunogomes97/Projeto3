@@ -13,28 +13,28 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
-					<Add directory="../../../../media/aluno/de2167c0-b259-4927-9042-5fda8d66b338/usr/local/include/opencv" />
+					<Add directory="../../../../../usr/local/include/opencv" />
 					<Add directory="include" />
 				</Compiler>
 				<Linker>
-					<Add library="../../../../usr/local/lib/libopencv_calib3d.so" />
-					<Add library="../../../../usr/local/lib/libopencv_core.so" />
-					<Add library="../../../../usr/local/lib/libopencv_dnn.so" />
-					<Add library="../../../../usr/local/lib/libopencv_features2d.so" />
-					<Add library="../../../../usr/local/lib/libopencv_flann.so" />
-					<Add library="../../../../usr/local/lib/libopencv_highgui.so" />
-					<Add library="../../../../usr/local/lib/libopencv_imgcodecs.so" />
-					<Add library="../../../../usr/local/lib/libopencv_imgproc.so" />
-					<Add library="../../../../usr/local/lib/libopencv_ml.so" />
-					<Add library="../../../../usr/local/lib/libopencv_objdetect.so" />
-					<Add library="../../../../usr/local/lib/libopencv_photo.so" />
-					<Add library="../../../../usr/local/lib/libopencv_shape.so" />
-					<Add library="../../../../usr/local/lib/libopencv_stitching.so" />
-					<Add library="../../../../usr/local/lib/libopencv_superres.so" />
-					<Add library="../../../../usr/local/lib/libopencv_video.so" />
-					<Add library="../../../../usr/local/lib/libopencv_videoio.so" />
-					<Add library="../../../../usr/local/lib/libopencv_videostab.so" />
-					<Add directory="../../../../usr/local/lib" />
+					<Add library="../../../../../usr/local/lib/libopencv_calib3d.so" />
+					<Add library="../../../../../usr/local/lib/libopencv_core.so" />
+					<Add library="../../../../../usr/local/lib/libopencv_dnn.so" />
+					<Add library="../../../../../usr/local/lib/libopencv_features2d.so" />
+					<Add library="../../../../../usr/local/lib/libopencv_flann.so" />
+					<Add library="../../../../../usr/local/lib/libopencv_highgui.so" />
+					<Add library="../../../../../usr/local/lib/libopencv_imgcodecs.so" />
+					<Add library="../../../../../usr/local/lib/libopencv_imgproc.so" />
+					<Add library="../../../../../usr/local/lib/libopencv_ml.so" />
+					<Add library="../../../../../usr/local/lib/libopencv_objdetect.so" />
+					<Add library="../../../../../usr/local/lib/libopencv_photo.so" />
+					<Add library="../../../../../usr/local/lib/libopencv_shape.so" />
+					<Add library="../../../../../usr/local/lib/libopencv_stitching.so" />
+					<Add library="../../../../../usr/local/lib/libopencv_superres.so" />
+					<Add library="../../../../../usr/local/lib/libopencv_video.so" />
+					<Add library="../../../../../usr/local/lib/libopencv_videoio.so" />
+					<Add library="../../../../../usr/local/lib/libopencv_videostab.so" />
+					<Add directory="../../../../../usr/local/lib" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -55,8 +55,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/ExibirTxt.h" />
 		<Unit filename="include/Face.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/ExibirTxt.cpp" />
 		<Unit filename="src/Face.cpp" />
 		<Extensions>
 			<code_completion />
