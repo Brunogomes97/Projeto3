@@ -2,6 +2,7 @@
 
    int x=0, y=0,dif=0,c=0;
 using namespace std;
+using namespace cv;
 Face::Face()
 {
     //ctor
@@ -9,7 +10,6 @@ Face::Face()
 
 void Face::detectarFace( Mat img, CascadeClassifier cascade, double scale)
 {
-
 
     vector<Rect> faces;
     Scalar color = Scalar(0,0,255);
@@ -28,17 +28,12 @@ void Face::detectarFace( Mat img, CascadeClassifier cascade, double scale)
         Size(30, 30) );
 
 
-
-
     for ( size_t i = 0; i < faces.size(); i++ )
     {
         Rect r = faces[i];
         Point center;
 
-
-
         //cout<<"o valor de y= "<<y<<endl;
-
 
         //cout<<"numero de faces na tela "<<quantFaces<<endl;
         printf("xy face = %d x %d\n", r.x, r.y);
@@ -46,18 +41,36 @@ void Face::detectarFace( Mat img, CascadeClassifier cascade, double scale)
         rectangle( img, cvPoint(cvRound(r.x*scale), cvRound(r.y*scale)),
                    cvPoint(cvRound((r.x + r.width-1)*scale), cvRound((r.y + r.height-1)*scale)),
                    color, 3, 8, 0);
-
     }
 
+        txt.exibirT("Numero de Faces: " + to_string(faces.size()),img,15);
+        txt.exibirT("Pessoas Capturadas: " + to_string(cont),img,30);
+
+        algoritimo(faces.size());
+
+    imshow( "Trafego de Pessoas", img );
+}
+
+Face::~Face()
+{
+    //dtor
+}
+
+int Face::getCont(){
 
 
+return cont;
+
+}
+
+void Face::algoritimo(int nFace){
 
     if(cont==0){
 
-            cont=faces.size();
+            cont=nFace;
 
         }
-        x=faces.size();
+        x=nFace;
         //cout<<"o valor de x= "<<x<<endl;
 
         if(x==y){
@@ -72,33 +85,16 @@ void Face::detectarFace( Mat img, CascadeClassifier cascade, double scale)
 
         }
 
-
         if(x>y){
-
 
             dif=x-y;
 
         }else if(x<y){
 
-
         dif=0;
-
 
         }
 
-
-        y=faces.size();
-    imshow( "Trafego de Pessoas", img );
-}
-
-Face::~Face()
-{
-    //dtor
-}
-
-int Face::getCont(){
-
-
-return cont;
+        y=nFace;
 
 }
