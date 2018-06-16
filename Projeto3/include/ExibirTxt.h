@@ -11,7 +11,9 @@ class ExibirTxt
     public:
         ExibirTxt();
         virtual ~ExibirTxt();
-        void exibirT(std::string,cv::Mat m,int);
+        void exibirT(std::string,cv::Mat &m,int);
+
+
 
 
     protected:

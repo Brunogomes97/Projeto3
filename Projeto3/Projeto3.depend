@@ -70,3 +70,36 @@
 1529070460 source:/home/user/Downloads/Projeto3/Projeto3/src/ExibirTxt.cpp
 	"ExibirTxt.h"
 
+1529147920 source:/home/bruno/Área de Trabalho/Projeto3-master/Projeto3/src/ExibirTxt.cpp
+	"ExibirTxt.h"
+
+1529158839 /home/bruno/Área de Trabalho/Projeto3-master/Projeto3/include/ExibirTxt.h
+	<string>
+	<iostream>
+	"opencv2/objdetect.hpp"
+	"opencv2/highgui.hpp"
+	"opencv2/imgproc.hpp"
+
+1529159701 source:/home/bruno/Área de Trabalho/Projeto3-master/Projeto3/main.cpp
+	"opencv2/objdetect.hpp"
+	"opencv2/highgui.hpp"
+	"opencv2/imgproc.hpp"
+	<iostream>
+	<exception>
+	<unistd.h>
+	"Face.h"
+	<ctime>
+	"ExibirTxt.h"
+
+1529160172 /home/bruno/Área de Trabalho/Projeto3-master/Projeto3/include/Face.h
+	"opencv2/objdetect.hpp"
+	"opencv2/highgui.hpp"
+	"opencv2/imgproc.hpp"
+	<iostream>
+	<exception>
+	<unistd.h>
+	"ExibirTxt.h"
+
+1529159657 source:/home/bruno/Área de Trabalho/Projeto3-master/Projeto3/src/Face.cpp
+	"Face.h"
+

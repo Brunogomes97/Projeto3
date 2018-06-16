@@ -1,6 +1,6 @@
 #include "Face.h"
 
-   int x=0, y=0,dif=0,c=0;
+
 using namespace std;
 using namespace cv;
 Face::Face()
@@ -8,7 +8,7 @@ Face::Face()
     //ctor
 }
 
-void Face::detectarFace( Mat img, CascadeClassifier cascade, double scale)
+void Face::detectarFace( Mat &img, CascadeClassifier &cascade, double scale)
 {
 
     vector<Rect> faces;
@@ -36,19 +36,19 @@ void Face::detectarFace( Mat img, CascadeClassifier cascade, double scale)
         //cout<<"o valor de y= "<<y<<endl;
 
         //cout<<"numero de faces na tela "<<quantFaces<<endl;
-        printf("xy face = %d x %d\n", r.x, r.y);
+       // printf("xy face = %d x %d\n", r.x, r.y);
 
         rectangle( img, cvPoint(cvRound(r.x*scale), cvRound(r.y*scale)),
                    cvPoint(cvRound((r.x + r.width-1)*scale), cvRound((r.y + r.height-1)*scale)),
                    color, 3, 8, 0);
     }
 
-        txt.exibirT("Numero de Faces: " + to_string(faces.size()),img,15);
-        txt.exibirT("Pessoas Capturadas: " + to_string(cont),img,30);
+        txt.exibirT("Faces na tela: " + to_string(faces.size()),img,15);
+        txt.exibirT("Faces Capturadas: " + to_string(contador-1),img,30);
+        txt.exibirT("Frames por Segundo:" + to_string(frame),img,45);
+        filtragem(faces.size());
 
-        algoritimo(faces.size());
-
-    imshow( "Trafego de Pessoas", img );
+    imshow( "Rastreador de Faces", img );
 }
 
 Face::~Face()
@@ -56,45 +56,53 @@ Face::~Face()
     //dtor
 }
 
-int Face::getCont(){
+int Face::getContador(){
 
 
-return cont;
+return (contador);
 
 }
 
-void Face::algoritimo(int nFace){
 
-    if(cont==0){
+void Face::setFrame(int frame){
+    this->frame=frame;
 
-            cont=nFace;
+
+
+}
+int Face::getFrame(){
+    return frame;
+
+}
+
+
+void Face::filtragem(int nFace){
+//Responsavel por filtrar bugs de captura(capturas das não-faces);
+    if(contador==0){
+            contador=nFace;
 
         }
-        x=nFace;
-        //cout<<"o valor de x= "<<x<<endl;
+    comparador1=nFace;
 
-        if(x==y){
-        c+=1;
 
-            if(c==50){
+    if(comparador1==comparador2){
+        filtro++;
+        if(filtro==50){
 
-            cont+=dif;
+            contador+=dif;
             dif=0;
-            c=0;
-            }
-
+            filtro=0;
         }
+    }
 
-        if(x>y){
+    if(comparador1>comparador2){
 
-            dif=x-y;
-
-        }else if(x<y){
-
+        dif=comparador1-comparador2;
+    }else if(comparador1<comparador2){
         dif=0;
 
-        }
+    }
 
-        y=nFace;
+    comparador2=nFace;
 
 }

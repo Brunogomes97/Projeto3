@@ -10,7 +10,7 @@ ExibirTxt::~ExibirTxt()
 {
     //dtor
 }
-void ExibirTxt::exibirT(std::string texto,Mat m, int posicao)
+void ExibirTxt::exibirT(std::string texto,Mat &m, int posicao)
 {
     putText(m,texto,
     Point2f(0, posicao),

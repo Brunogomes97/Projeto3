@@ -12,17 +12,21 @@ class Face
 {
     public:
         Face();
-        void detectarFace(cv::Mat img, cv::CascadeClassifier cascade, double scale);
+        void detectarFace(cv::Mat &img, cv::CascadeClassifier &cascade, double scale);
         virtual ~Face();
-        int getCont();
-        void algoritimo(int);
+        int getContador();
+        void filtragem(int);
         ExibirTxt txt;
+        void setFrame(int);
+        int getFrame();
 
     private:
-        int cont;
-        int quantFaces;
-
-
+        int contador=0;
+        int comparador1=0;
+        int comparador2=0;
+        int dif=0;
+        int filtro=0;
+        int frame;
 };
 
 #endif // FACE_H
