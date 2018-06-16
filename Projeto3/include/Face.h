@@ -1,24 +1,29 @@
 #ifndef FACE_H
 #define FACE_H
-#include "opencv2/objdetect.hpp"
-#include "opencv2/highgui.hpp"
-#include "opencv2/imgproc.hpp"
+
 #include <iostream>
-#include <exception>
+#include <exception>            //includes c/c++
 #include <unistd.h>
+
+#include "opencv2/objdetect.hpp"
+#include "opencv2/highgui.hpp"  //includes opencv
+#include "opencv2/imgproc.hpp"
+
 #include "ExibirTxt.h"
 
 class Face
 {
     public:
         Face();
-        void detectarFace(cv::Mat &img, cv::CascadeClassifier &cascade, double scale);
         virtual ~Face();
-        int getContador();
+        void detectarFace(cv::Mat &img, cv::CascadeClassifier &cascade, double scale);
         void filtragem(int);
         ExibirTxt txt;
-        void setFrame(int);
+
+        int getContador();  //gets
         int getFrame();
+
+        void setFrame(int); //sets
 
     private:
         int contador=0;

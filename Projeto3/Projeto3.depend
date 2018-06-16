@@ -39,35 +39,37 @@
 1529003558 source:/home/aluno/Documentos/Projeto3/src/Face.cpp
 	"Face.h"
 
-1529073664 source:/home/user/Downloads/Projeto3/Projeto3/main.cpp
-	"opencv2/objdetect.hpp"
-	"opencv2/highgui.hpp"
-	"opencv2/imgproc.hpp"
+1529177600 source:/home/user/Downloads/Projeto3/Projeto3/main.cpp
 	<iostream>
 	<exception>
 	<unistd.h>
+	<ctime>
+	"opencv2/objdetect.hpp"
+	"opencv2/highgui.hpp"
+	"opencv2/imgproc.hpp"
 	"Face.h"
-
-1529072095 /home/user/Downloads/Projeto3/Projeto3/include/Face.h
-	"opencv2/objdetect.hpp"
-	"opencv2/highgui.hpp"
-	"opencv2/imgproc.hpp"
-	<iostream>
-	<exception>
-	<unistd.h>
 	"ExibirTxt.h"
 
-1529072917 source:/home/user/Downloads/Projeto3/Projeto3/src/Face.cpp
+1529178847 /home/user/Downloads/Projeto3/Projeto3/include/Face.h
+	<iostream>
+	<exception>
+	<unistd.h>
+	"opencv2/objdetect.hpp"
+	"opencv2/highgui.hpp"
+	"opencv2/imgproc.hpp"
+	"ExibirTxt.h"
+
+1529178733 source:/home/user/Downloads/Projeto3/Projeto3/src/Face.cpp
 	"Face.h"
 
-1529070467 /home/user/Downloads/Projeto3/Projeto3/include/ExibirTxt.h
+1529178555 /home/user/Downloads/Projeto3/Projeto3/include/ExibirTxt.h
 	<string>
 	<iostream>
 	"opencv2/objdetect.hpp"
 	"opencv2/highgui.hpp"
 	"opencv2/imgproc.hpp"
 
-1529070460 source:/home/user/Downloads/Projeto3/Projeto3/src/ExibirTxt.cpp
+1529178494 source:/home/user/Downloads/Projeto3/Projeto3/src/ExibirTxt.cpp
 	"ExibirTxt.h"
 
 1529147920 source:/home/bruno/Área de Trabalho/Projeto3-master/Projeto3/src/ExibirTxt.cpp
